@@ -158,10 +158,12 @@ times, cpu_loads = zip(*cpu_load_over_time)
 plt.figure(figsize=(10, 5))
 plt.plot(times, cpu_loads, label='CPU Load (%)')
 plt.axvline(x=DDOS_ATTACK_START, color='red', linestyle='--', label='DDoS Attack Start')
-plt.xlabel('Time (s)')
-plt.ylabel('CPU Load (%)')
-plt.title('Server CPU Load Over Time')
-plt.legend()
+
+# Set Times New Roman font and larger size for labels and title
+plt.xlabel('Time (s)', fontsize=20, fontname='Times New Roman')
+plt.ylabel('CPU Load (%)', fontsize=20, fontname='Times New Roman')
+plt.title('Server CPU Load Over Time', fontsize=22, fontname='Times New Roman')
+plt.legend(fontsize=16)
 plt.grid(True)
 plt.savefig('cpu_load_over_time.png')  # Save the plot as a PNG file
 
@@ -170,9 +172,11 @@ times, dropped_packets = zip(*dropped_packets_over_time)
 plt.figure(figsize=(10, 5))
 plt.plot(times, dropped_packets, label='Dropped Packets')
 plt.axvline(x=DDOS_ATTACK_START, color='red', linestyle='--', label='DDoS Attack Start')
-plt.xlabel('Time (s)')
-plt.ylabel('Dropped Packets')
-plt.title('Dropped Packets Over Time')
-plt.legend()
+
+# Set Times New Roman font and larger size for labels and title
+plt.xlabel('Time (s)', fontsize=20, fontname='Times New Roman')
+plt.ylabel('Dropped Packets', fontsize=20, fontname='Times New Roman')
+plt.title('Dropped Packets Over Time', fontsize=22, fontname='Times New Roman')
+plt.legend(fontsize=16)
 plt.grid(True)
 plt.savefig('dropped_packets_over_time.png')  # Save the plot as a PNG file
